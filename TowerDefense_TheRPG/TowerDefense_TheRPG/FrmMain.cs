@@ -26,6 +26,7 @@ namespace TowerDefense_TheRPG
         public static string storeTimePlayed = "";
         private int LevelBefore;
         private int LevelAfter;
+        public static int playerLevel = 1;
         private string arrow_directions = "horizontal";
         #endregion
 
@@ -322,6 +323,7 @@ namespace TowerDefense_TheRPG
             if (LevelAfter > LevelBefore)
             {
                 lblLevelValue.Text = LevelAfter.ToString();
+                playerLevel = LevelAfter;
                 
                 UpgradeVillage();
 
@@ -477,10 +479,11 @@ namespace TowerDefense_TheRPG
                     if (village.CurHealth <= 0)
                     {
                         village.Hide(); // defeated
-                        Form frmGO = new FrmGameOver();
-                        frmGO.Show();
+                        Form frmStat = new FrmStats();
+                        counter = 0;
+                        frmStat.Show();
                         this.Hide();
-                        FormManager.PushToFormStack(frmGO);
+                        FormManager.PushToFormStack(frmStat);
 
                         // disable timers
                         tmrMoveArrows.Enabled = false;

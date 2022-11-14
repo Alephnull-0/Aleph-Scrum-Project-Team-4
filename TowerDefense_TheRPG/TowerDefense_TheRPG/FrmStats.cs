@@ -16,6 +16,7 @@ namespace TowerDefense_TheRPG
         {
             lblKills.Text = FrmMain.kills.ToString();
             lblCounter.Text = FrmMain.storeTimePlayed.ToString();
+            lblLevelStatValue.Text = FrmMain.playerLevel.ToString();
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -44,6 +45,11 @@ namespace TowerDefense_TheRPG
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLevelStatValue_Click(object sender, EventArgs e)
         {
 
         }
