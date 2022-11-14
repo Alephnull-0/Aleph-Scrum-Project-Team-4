@@ -56,8 +56,6 @@
         {
             LevelXP = 5 + (Level * (Level * 5));
 
-            GainLevel();
-
             XP += xpGained;
 
             if (XP >= LevelXP)
