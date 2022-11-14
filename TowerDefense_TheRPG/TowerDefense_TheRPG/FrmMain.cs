@@ -73,7 +73,7 @@ namespace TowerDefense_TheRPG
                 bossBalloon = Enemy.MakeBossBalloon(x, y);
                 enemies.Add(bossBalloon);
             }
-            if (player.CurHealth <= 0){
+            if (player.CurHealth <= 0 || village.CurHealth <= 0){
                 counter= 0;
                 kills = 0;
                 tmrGameTime.Enabled = false;
